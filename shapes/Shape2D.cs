@@ -34,7 +34,7 @@ namespace examination_2
         public abstract double Area { get; }
         public abstract double Perimeter { get; }
 
-        public override string ToString() => $"Längd : {_length}\nBredd : {_width}\nOmkrets : {Perimeter}\nArea : {Area}";
+        public override string ToString() => $"Längd : {_length:F1}\nBredd : {_width:F1}\nOmkrets : {Perimeter:F1}\nArea : {Area:F1}";
 
         public override string ToString(string format)
         {
@@ -45,7 +45,7 @@ namespace examination_2
                 case null:
                     return ToString();
                 case "R":
-                    return $"{ShapeType} {_length} {_width} {Perimeter} {Area}";
+                    return $"{ShapeType} {_length:F1} {_width:F1} {Perimeter:F1} {Area:F1}";
                 default:
                     throw new FormatException();
             }
