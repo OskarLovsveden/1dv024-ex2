@@ -5,13 +5,7 @@ namespace examination_2
         public Rectangle(double length, double width)
         : base(ShapeType.Rectangle, length, width)
         { }
-        public override double Area
-        {
-            get;
-        }
-        public override double Perimeter
-        {
-            get;
-        }
+        public override double Area { get => 2 * (Length + Width); }
+        public override double Perimeter { get => Length * Width; }
     }
 }
