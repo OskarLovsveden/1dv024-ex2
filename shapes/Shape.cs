@@ -2,7 +2,7 @@ namespace examination_2
 {
     abstract class Shape
     {
-        Shape(ShapeType shapeType)
+        public Shape(ShapeType shapeType)
         {
             ShapeType = shapeType;
         }
