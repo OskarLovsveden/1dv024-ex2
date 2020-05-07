@@ -1,6 +1,6 @@
 namespace examination_2
 {
-    abstract class Shape
+    public abstract class Shape
     {
         public Shape(ShapeType shapeType)
         {

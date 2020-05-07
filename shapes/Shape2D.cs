@@ -2,10 +2,11 @@ using System;
 
 namespace examination_2
 {
-    abstract class Shape2D : Shape
+    public abstract class Shape2D : Shape
     {
         private double _length;
         private double _width;
+
         public Shape2D(ShapeType shapeType, double length, double width)
         : base(shapeType)
         {
