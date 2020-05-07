@@ -5,17 +5,31 @@ namespace examination_2
     public class Ellipse : Shape2D
     {
         public Ellipse(double diameter)
-        : base(ShapeType.Ellipse, diameter / 2, diameter / 2)
-        {
-
-        }
+        : base(ShapeType.Ellipse, diameter, diameter)
+        { }
         public Ellipse(double hdiameter, double vdiameter)
-        : base(ShapeType.Ellipse, hdiameter / 2, vdiameter / 2)
+        : base(ShapeType.Ellipse, hdiameter, vdiameter)
+        { }
+
+        public override double Area
         {
+            get
+            {
+                double a = Length / 2;
+                double b = Width / 2;
+                return Math.PI * (a * b);
 
+            }
         }
+        public override double Perimeter
+        {
+            get
+            {
 
-        public override double Area { get => Math.PI * (Length * Width); }
-        public override double Perimeter { get => 2 * Math.PI * Math.Sqrt((Length * Length + Width * Width) / 2); }
+                double a = Length / 2;
+                double b = Width / 2;
+                return 2 * Math.PI * Math.Sqrt((a * a + b * b) / 2);
+            }
+        }
     }
 }
