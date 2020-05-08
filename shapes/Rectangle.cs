@@ -8,6 +8,6 @@ namespace examination_2
 
         public override double Area { get => Length * Width; }
 
-        public override double Perimeter { get => 2 * (Length + Width); }
+        public override double Perimeter { get => 2d * (Length + Width); }
     }
 }

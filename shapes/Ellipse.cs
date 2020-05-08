@@ -16,8 +16,8 @@ namespace examination_2
         {
             get
             {
-                double a = Length / 2;
-                double b = Width / 2;
+                double a = Length / 2d;
+                double b = Width / 2d;
                 return Math.PI * (a * b);
 
             }
@@ -28,9 +28,9 @@ namespace examination_2
             get
             {
 
-                double a = Length / 2;
-                double b = Width / 2;
-                return 2 * Math.PI * Math.Sqrt((a * a + b * b) / 2);
+                double a = Length / 2d;
+                double b = Width / 2d;
+                return 2d * Math.PI * Math.Sqrt((a * a + b * b) / 2d);
             }
         }
     }
