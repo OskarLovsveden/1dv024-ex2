@@ -4,11 +4,11 @@ namespace examination_2
 {
     public abstract class Shape3D : Shape
     {
-        Shape2D _baseShape;
+        protected Shape2D _baseShape;
 
         private double _height;
 
-        public Shape3D(ShapeType shapeType, Shape2D baseShape, double height)
+        protected Shape3D(ShapeType shapeType, Shape2D baseShape, double height)
         : base(shapeType)
         {
             _baseShape = baseShape;

@@ -8,7 +8,7 @@ namespace examination_2
 
         private double _width;
 
-        public Shape2D(ShapeType shapeType, double length, double width)
+        protected Shape2D(ShapeType shapeType, double length, double width)
         : base(shapeType)
         {
             Length = length;
