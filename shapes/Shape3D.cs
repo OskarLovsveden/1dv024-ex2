@@ -25,11 +25,11 @@ namespace examination_2
             }
         }
 
-        public virtual double MantelArea { get; }
+        public virtual double MantelArea { get => _baseShape.Perimeter * _height; }
 
-        public virtual double TotalSurfaceArea { get; }
+        public virtual double TotalSurfaceArea { get => MantelArea + 2 * _baseShape.Area; }
 
-        public virtual double Volume { get; }
+        public virtual double Volume { get => _baseShape.Area * _height; }
 
         public override string ToString() =>
         $"Längd : {_baseShape.Length:F1}\nBredd : {_baseShape.Width:F1}\nHeight : {Height:F1}\nMantelarea : {MantelArea:F1}\nBegränsningsarea : {TotalSurfaceArea:F1}\nVolym : {Volume:F1}";
