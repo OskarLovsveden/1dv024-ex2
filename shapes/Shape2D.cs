@@ -5,6 +5,7 @@ namespace examination_2
     public abstract class Shape2D : Shape
     {
         private double _length;
+
         private double _width;
 
         public Shape2D(ShapeType shapeType, double length, double width)
@@ -13,6 +14,7 @@ namespace examination_2
             Length = length;
             Width = width;
         }
+
         public double Length
         {
             get => _length;
@@ -22,6 +24,7 @@ namespace examination_2
                 _length = value;
             }
         }
+
         public double Width
         {
             get => _width;
@@ -31,7 +34,9 @@ namespace examination_2
                 _width = value;
             }
         }
+
         public abstract double Area { get; }
+
         public abstract double Perimeter { get; }
 
         public override string ToString() => $"Längd : {_length:F1}\nBredd : {_width:F1}\nOmkrets : {Perimeter:F1}\nArea : {Area:F1}";

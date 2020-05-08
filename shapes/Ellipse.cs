@@ -7,6 +7,7 @@ namespace examination_2
         public Ellipse(double diameter)
         : base(ShapeType.Ellipse, diameter, diameter)
         { }
+
         public Ellipse(double hdiameter, double vdiameter)
         : base(ShapeType.Ellipse, hdiameter, vdiameter)
         { }
@@ -21,6 +22,7 @@ namespace examination_2
 
             }
         }
+
         public override double Perimeter
         {
             get
