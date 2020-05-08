@@ -47,7 +47,7 @@ namespace examination_2
                 case "R":
                     return $"{ShapeType} {_length:F1} {_width:F1} {Perimeter:F1} {Area:F1}";
                 default:
-                    throw new FormatException();
+                    throw new FormatException("Could not format the text representation.");
             }
         }
     }
