@@ -36,7 +36,7 @@ namespace examination_2
             }
         }
 
-        public static void ShapesMenu()
+        static void ShapesMenu()
         {
             int total;
 

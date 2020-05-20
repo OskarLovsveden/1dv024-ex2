@@ -7,12 +7,12 @@ namespace examination_2
 {
     class ShapeGenerator
     {
-        public static double GenerateDouble(double maxValue = 100, double minValue = 0.01)
+        static double GenerateDouble(double maxValue = 100, double minValue = 0.01)
         {
             return new Random().NextDouble() * (maxValue - minValue) + minValue;
         }
 
-        public static Shape AssignParameters(int length, Type selectedType)
+        static Shape AssignParameters(int length, Type selectedType)
         {
             if (length == 1)
             {
