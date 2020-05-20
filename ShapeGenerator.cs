@@ -5,13 +5,28 @@ using System.Reflection;
 
 namespace examination_2
 {
+    /// <summary>
+    /// Class representing the ShapeGenerator
+    /// </summary>
     class ShapeGenerator
     {
+        /// <summary>
+        /// Generates a random double between 2 values
+        /// </summary>
+        /// <param name="maxValue">A double with a standardvalue of 100</param>
+        /// <param name="minValue">A double with a standardvalue of 0.01</param>
+        /// <returns>A double</returns>
         static double GenerateDouble(double maxValue = 100, double minValue = 0.01)
         {
             return new Random().NextDouble() * (maxValue - minValue) + minValue;
         }
 
+        /// <summary>
+        /// Assigns values to the parameters of the shape
+        /// </summary>
+        /// <param name="length">The amount of parameters to assign values to</param>
+        /// <param name="selectedType">The type of the shape</param>
+        /// <returns>An instance of Shape</returns>
         static Shape AssignParameters(int length, Type selectedType)
         {
             if (length == 1)
@@ -28,6 +43,10 @@ namespace examination_2
             }
         }
 
+        /// <summary>
+        /// Generates shapes based on how many the user wants to generate
+        /// </summary>
+        /// <param name="amount">Represents the amount of shapes to be generated</param>
         public static void GenerateShapes(int amount)
         {
             // Get assembly
@@ -91,7 +110,14 @@ namespace examination_2
                     shapeList2D.Add((Shape2D)shape);
                 }
             }
+            PrintShapes(shapeList2D, shapeList3D);
+        }
 
+        /// <summary>
+        /// Loops and prints shapes with a formatted string
+        /// </summary>
+        static void PrintShapes(List<Shape2D> shapeList2D, List<Shape3D> shapeList3D)
+        {
             IOrderedEnumerable<Shape2D> query2D =
                 from shape in shapeList2D
                 orderby shape.ShapeType, shape.Area descending

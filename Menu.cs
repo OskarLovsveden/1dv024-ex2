@@ -2,8 +2,15 @@ using System;
 
 namespace examination_2
 {
+    /// <summary>
+    /// Class representing the Menu
+    /// </summary>
     class Menu
     {
+        /// <summary>
+        /// Main Menu
+        /// </summary>
+        /// <returns>Returns true or false</returns>
         public static bool MainMenu()
         {
             while (true)
@@ -36,6 +43,9 @@ namespace examination_2
             }
         }
 
+        /// <summary>
+        /// The Menu for picking how many shapes to generate
+        /// </summary>
         static void ShapesMenu()
         {
             int total;
@@ -67,6 +77,7 @@ namespace examination_2
 
             }
             Console.Clear();
+            Console.WriteLine(total);
             ShapeGenerator.GenerateShapes(total);
         }
     }
